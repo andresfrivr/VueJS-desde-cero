@@ -1,0 +1,29 @@
+<!DOCTYOE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Vuejs</title>
+    </head>
+    <body>
+        <div id="elemento">
+            {{contenido}}
+            <ul>
+                <li v-for="lenguaje of lenguajes"><a :href="lenguaje.link" target="_blank">{{lenguaje.nombre}}</a></li>
+            </ul>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const con=new Vue({
+            el:"#elemento",
+            data:{
+                contenido:"Hola Mundo",
+                lenguajes: [
+                    {nombre: "Javascript",link:'https://www.javascript.com'},
+                    {nombre: "PHP",link:'https://www.php.net'},
+                    {nombre: "Python",link:'https://www.python.org'}
+                ]
+            }
+        })
+    </script>
+</html>
